@@ -1,0 +1,8 @@
+<button mat-mini-fab [matMenuTriggerFor]="user">
+    <img [src]="user.photoURL" [alt]="user.displayName" class="avatar">
+</button>
+<mat-menu #menu="matMenu">
+    <div class="profile-card">
+        <img [src]="user.photoURL" [alt]="user.displayName">
+    </div>
+</mat-menu>

@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Third Line</span>
+        <span class="spacer"></span>
+        <ng-template #loginItem>
+            <button mat-icon-button (click)="login()">
+                <mat-icon class="icon" aria-hidden="false" matTooltip="login" aria-label="Login">fingerprint</mat-icon>
+            </button>
+        </ng-template>
+        <div *ngIf="user; else loginItem;">
+            <p>{{ user.displayName }}</p>
+        </div>
+        <app-profile-card></app-profile-card>
+    </mat-toolbar-row>
+</mat-toolbar>
